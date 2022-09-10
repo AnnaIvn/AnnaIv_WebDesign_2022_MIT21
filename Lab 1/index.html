@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1 - CV</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="./img/photo1.png" alt="My photo" width="200" height="200">
+        </div>
+
+        <div>
+            <h1>Anna Ivanytska</h1>
+            <p>Web developer</p>
+            <hr>
+            <p>Front-end developer with a foundation knowledge in computer hardware and software, operating systems,
+                networking concepts. Also have some experiense working with Python, C++.</p>
+
+        </div>
+
+    </header>
+
+    <aside>
+        <!-- left column -->
+        <section>
+            <!-- social media -->
+            <h3>Contacts:</h3>
+            <hr>
+            <p>Email:</p>
+            <h5>aniaiv12345@gmail.com</h5>
+            <p>Phone:</p>
+            <h5>+380 66 617 12 12</h5>
+            <p>Address:</p>
+            <h5>Kyiv, Ukraine</h5>
+            <p>LinkedIn:</p>
+            <a href="https://www.linkedin.com/in/anna-ivanytska-b379a224a/"
+                target="_blank">linkedin.com/in/anna-ivanytska-b379a224a/</a>
+        </section>
+
+        <section>
+            <!-- skils -->
+            <h3>Skils</h3>
+            <hr>
+            <ul>
+                <li>Basic knoledge of HTML, CSS</li>
+                <li>Some experience with C++, Python</li>
+                <li>Computer hardware tecnician</li>
+                <li>Networking concepts</li>
+            </ul>
+        </section>
+
+        <section>
+            <!-- languages -->
+            <h3>Languages</h3>
+            <hr>
+            <div>
+                <h4>English</h4>
+                <div>
+                    o o o
+                </div>
+            </div>
+        </section>
+
+    </aside>
+
+    <div>
+        <!-- right column -->
+        <section>
+            <div>
+                <!-- Work Experience -->
+                <h3>Work Experience</h3>
+                <hr>
+                <ul>
+                    <!-- <li></li> -->
+                </ul>
+            </div>
+
+            <div>
+                <!-- Organisations -->
+                <h3>Organisations</h3>
+                <hr>
+                <ul>
+                    <!-- <li></li> -->
+                </ul>
+            </div>
+
+            <div>
+                <!-- Education -->
+                <h3>Education</h3>
+                <hr>
+                <div>
+                    <p>Taras Shevchenko National University of Kyiv </p>
+                    <p>09/2021 - 06/2026</p>
+                </div>
+                
+
+            </div>
+
+            <div>
+                <!-- Certificates -->
+                <h3>Certificates</h3>
+                <hr>
+                <ul>
+                    <li>IT Esentias</li>
+                    <li>EF SET certified</li>
+                </ul>
+            </div>
+
+            <div>
+                <!-- Honors and Awards -->
+                <h3>Honors and Awards</h3>
+                <hr>
+                <ul>
+                    <!-- <li></li> -->                    
+                </ul>
+            </div>
+
+            <div>
+                <br>
+                <!-- Form -->
+                <form action="process.php" method="POST">
+                    <div>
+                        <label>First Name</label>
+                        <input type="text" name="firstName" placeholder="Enter first name">
+                    </div>
+                    <br>
+
+                    <div>
+                        <label>Last Name</label>
+                        <input type="text" name="lastName" placeholder="Enter last name">
+                        
+                    </div>
+                    <br>
+
+                    <div>
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="Enter an email name">
+                        
+                    </div>
+                    <br>
+
+                    <div>
+                        <label>Message</label>
+                        <textarea name="message" placeholder="Enter your message"></textarea>
+                        
+                    </div>
+                    <br>
+
+                    <div>
+                        <label>Gender</label>
+                        <select name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label>Age: </label>
+                        <input type="number" name="age" value="30">
+                    </div>
+                    <br>
+
+                    <div>
+                        <label>Birthday: </label>
+                        <input type="date" name="birthday">
+                    </div>
+                    <br>
+
+                    <input type="submit" name="submit" value="Submit">
+                    <br>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div>
+            &copy; 2022
+        </div>
+        <a href="./template.html" target="_blank">Go to cv template</a>
+    </footer>
+
+</body>
+
+</html>
