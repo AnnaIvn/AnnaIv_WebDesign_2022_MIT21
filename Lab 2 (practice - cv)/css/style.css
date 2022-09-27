@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,900;1,300;1,400&display=swap');
+
+:root{
+    font-family: 'Poppins', sans-serif;
+    background-color: whitesmoke;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+header, .container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.left-column{
+    flex: 1 2 200px;
+}
+
+.right-column{
+    flex: 3 1 300px;
+    padding-left: 20px;
+}
+
+img{
+    border-radius: 50%;
+}
+
+.grey-pannel {
+    padding: 0px 5px 2px 5px;
+    /*background-color: lightgrey;*/
+    line-height: 1.1;
+}
+
+.pannel-1 {
+    padding: 0px 5px 2px 5px;
+    /*color: white;
+    background-color: grey;*/
+    line-height: 1.1;
+}
+
+/*.grey-pannel *{
+    background-color: rgba(0,0,0,0);
+}*/
+
+ul.square {
+    list-style-type: square;
+}
+  
+#vertical-line{
+    width: 2px;
+    height:550px;
+    background-color: black;
+}
+
+#horisontal-line{
+    width: 800px;
+    height:2px;
+    background-color: black;
+}
+
+#horisontal-line-2{
+    width: 260px;
+    height:2px;
+    background-color: black;
+}
+
+
+h1{
+    font-weight: 500;
+    
+}
+
+p, h5{
+    font-weight: 300;
+}
+
+h3{
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
