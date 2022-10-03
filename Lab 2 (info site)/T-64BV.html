@@ -11,43 +11,63 @@
 </head>
 
 <body>
-    <header>
-        <div class="left-column">
-            <img src="./img/1.jpg" class="img1" alt="My photo">
+
+
+
+    <!-- header section starts -->
+    <header class="navbar">
+
+        <div class="bar-option">
+            <a href="index.html">На головну </a>
         </div>
-
-        <div class="right-column grey-pannel">
-            <h1>Військова техніка: Танки</h1>
-            <h4>Тут ви знайдете інформацію про українські танки</h4>
-            <!--<hr>-->
-            <p></p>
-
+        
+        <div class="bar-option">
+            <a href="stat.html">Статистика </a>
         </div>
 
     </header>
+    <!-- header section ends -->
 
-    <div>
-        <a href="index.html">На головну</a>
-    </div>
 
-    <div class= "container">
-        <aside class="left-column">
-            <!-- left column -->
+
+    <!-- top section starts -->
+    <div class="top">
+        <div class="left">
+            <img src="./img/1.jpg" class="img1" alt="My photo">
+        </div>
+
+        <div class="right">
             
-            <section class="pannel-1">
+            <a href="index.html">Військова техніка: Танки</a>
+            
+            <p>Тут ви знайдете інформацію про українські танки</p>
+        </div>
+    </div>
+    <!-- top section ends -->
+    
+
+
+    <div class= "info">
+
+
+
+        <!-- left column starts -->
+        <aside class="left-column">
+
+            <section class="pannel">
                 <!-- посилання -->
                 <h3>Посилання по темам:</h3>
-                <p><a href="index.html">На головну</a></p>
                 <p><a href="./T-55AGM.html" >T-55AГМ</a></p>
                 <p><a href="./T-64.html" >T-64</a></p>
-                <p><a href="./T-64BV.html" >T-64</a></p>
+                <p><a href="./T-64BV.html" >T-64БВ</a></p>
                 <br>
             </section>
 
             <div id="horisontal-line-2"></div>
 
-            <section>
+            <section class="pannel">
                 <!-- інші посилання -->
+                <br>
                 <h3>Посилання на інші сайти: </h3>
                 <div>
                     <p><a href="https://mil.in.ua/uk/tag/ukraine/" target="_blank">mil.in.ua</a></p>
@@ -57,9 +77,14 @@
             </section>
 
         </aside>
+        <!-- left column ends -->
 
-        <div class="right-column">
-            <!-- right column -->
+
+
+        <!-- right column starts -->
+        <div class="tank-info">
+
+            
             <section>
 
                 <div>
@@ -93,7 +118,8 @@
                     <p>Основна відмінність нової модифікації полягає в заміні старих радіостанцій на сучасні цифрові. Танк отримав три радіостанції — дві на ультракороткі хвилі та одну — короткі з дальністю дії до 500 км.</p>
                     <p>Для автономного живлення апаратури було встановлено додатковий енергоагрегат потужністю 3 КВт.</p>
                     <p>Системи зв'язку єдині для ЗСУ, тому командир має змогу спілкуватися з усіма видами бронетехніки — БТР, БМП, командними пунктами.</p>
-                    <p>Фахівці заводу встановили на машині нові прилади, зокрема:</p>
+                    <br>
+                    <h4>Фахівці заводу встановили на машині нові прилади, зокрема:</h4>
                     <ul>
                         <li>спостереження та прицілювання третього покоління — зокрема тепловізійний танковий приціл ТПН1 ТПВ;</li>
                         <li>прилад спостереження денного та нічного бачення механіка-водія ТВНЕ-4БУМ;</li>
@@ -101,7 +127,8 @@
                         <li>апаратура супутникової навігації CH-4215.</li>
                     </ul>
                     <p>Раніше командирові не вистачало оглядового простору, тому було встановлено камеру, яка дає змогу вести спостереження з укриття до 2,5 метра заввишки. Встановлена командирська камера з монокуляром цю ваду усунула. Командир може спостерігати за перебігом бою, виходом мішені, давати команду водієві, механікові-навідникові на початок виконання вправи.</p>
-                    <p>Зі зброї та захисту танк отримав:</p>
+                    <br>
+                    <h4>Зі зброї та захисту танк отримав:</h4>
                     <ul>
                         <li>командирську башту з кулеметом НСВТ калібру 12,7 мм;</li>
                         <li>додатковий броньований захист магазина;</li>
@@ -124,57 +151,29 @@
                     <ul>
                         <a href="https://uk.wikipedia.org/wiki/%D0%A2-64%D0%91%D0%92" target="_blank">https://uk.wikipedia.org/wiki/%D0%A2-64%D0%91%D0%92</a>
                     </ul>
+                    <br>
                 </div>
-
-                
-
-                
+  
             </section>
         </div>
+        <!-- right column ends -->
+
+
     </div>
 
+
+
+    <!-- footer starts -->
     <footer>
-        <div>
-            <br>
-            <!-- Form -->
-            <form action="process.php" method="POST">
-                <div>
-                    <label>First Name</label>
-                    <input type="text" name="firstName" placeholder="Enter first name">
-                </div>
-                <br>
-
-                <div>
-                    <label>Last Name</label>
-                    <input type="text" name="lastName" placeholder="Enter last name">
-
-                </div>
-                <br>
-
-                <div>
-                    <label>Email</label>
-                    <input type="email" name="email" placeholder="Enter an email name">
-
-                </div>
-                <br>
-
-                <div>
-                    <label>Message</label>
-                    <textarea name="message" placeholder="Enter your message"></textarea>
-
-                </div>
-                <br>
-
-                <input type="submit" name="submit" value="Submit">
-                <br>
-            </form>
-        </div>
 
         <div>
             &copy; 2022
         </div>
-        <a href="./template.html" target="_blank">Go to cv template</a>
+
     </footer>
+    <!-- footer ends -->
+
+
 
 </body>
 

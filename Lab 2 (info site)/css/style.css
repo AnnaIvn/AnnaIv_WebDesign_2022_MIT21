@@ -1,87 +1,277 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,900;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 :root{
     font-family: 'Poppins', sans-serif;
     background-color: whitesmoke;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
+    --main-color:#e38528;
+    text-decoration: none;
+}
+
+*{ 
+    font-family: 'Roboto', sans-serif;
+    transition:all .2s linear;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline:none; border:none;
+    text-decoration: none;
+    transition:all .2s linear;
+    line-height: 1.5;
 }
 
 
-header, .container{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+.navbar{                            /* HEADER */
+    position:fixed;
+    top:0; left:0;                
+    background: #222;           
+    display: flex;                   /* items in header will be in center horisontally? */
+    /* justify-content: 3px; */
+    z-index: 1000;
+    flex-flow: wrap;
+    padding: 8rem, 1rem;
+    width: 120rem;                    /* розмір тексту в хедері */
+    text-align: center;
+    align-items: left; 
     padding-bottom: 20px;
 }
-
-.left-column{
-    flex: 1 2 200px;
+.navbar .bar-option{
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+.navbar .bar-option a{                   /* TEXT IN HEADER */
+    font-size: 1.3rem;                   /* size of tags in header */
+    color: #fff;                     
+    margin: 0.5rem 0; 
+}
+.navbar .bar-option a:hover{           /* WHEN HOVER ON TEXT IN HEADER */
+    letter-spacing: .2rem;             /* spasing between letters appead when hover (mouse is standing on them) */      
+    color: var(--main-color);  
 }
 
-.right-column{
-    flex: 3 1 700px;
-    padding-left: 20px;
+
+.top{                                   /* MAIN TITLE */
+    padding-top: 100px;
+    padding-left: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
 }
+.top .left{                             /* img */
+    margin-left: 65px;
+    margin-bottom: 15px;
+}
+.top .right{
+    padding-left: 6rem;
+}
+.top .right a{
+    text-decoration: none;
+    font-size: 4.5rem;
+    color: #111;
+    font-weight: bolder;
+}
+.top .right a:hover{
+    color: var(--main-color);  
+}
+.top .right p{
+    color:#666;
+    font-size: 1.7rem;
+    padding: .5rem 0;
+}
+
+.btn{                                /* for btn class(about me) at home -> content */
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.8rem 3rem;
+    background:var(--main-color);
+    color:#fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.btn:hover{                           /* when standing on btn */
+    background: #111;
+    letter-spacing: .1rem;
+}
+
+
+.info{                                      /* INFO */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem 3rem;
+
+}
+.info .left-column{                         /* LEFT COLUMN OF INFO */
+    
+    padding-left: 3rem;
+    padding-right: 2rem;
+}
+.info .left-column .pannel h3{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #222;
+    font-weight: bolder;
+}
+.info .left-column .pannel a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #333;
+}
+.info .left-column .pannel a:hover{
+    color: var(--main-color);
+}
+#horisontal-line-2{
+    width: 230px;
+    height:2px;
+    background-color: #222;
+}
+
+.info .right-column{                          /* RIGHT COLUMN OF INFO */
+    padding-left: 0.2rem;
+}
+.info .right-column h3{
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: var(--main-color);
+    font-weight: bolder;
+}
+.info .right-column ul{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #333;
+    margin-left: 35px;
+}
+.info .right-column p{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #333;
+}
+
 
 .img1{
     border-radius: 50%;
     width: 180px;
     height: 180px;
 }
-
-.grey-pannel {
-    padding: 30px 40px 30px 40px;
-    background-color: lightgrey;
-    line-height: 1.1;
-}
-
-.pannel-1 {
-    padding: 0px 5px 2px 5px;
-    /*color: white;
-    background-color: grey;*/
-    line-height: 1.1;
-}
-
-/*.grey-pannel *{
-    background-color: rgba(0,0,0,0);
-}*/
-
 ul.square {
     list-style-type: square;
 }
-  
-#vertical-line{
-    width: 2px;
-    height:550px;
-    background-color: black;
-}
-
 #horisontal-line{
     width: 800px;
     height:2px;
     background-color: black;
 }
 
-#horisontal-line-2{
-    width: 260px;
-    height:2px;
-    background-color: black;
+
+.statistics{
+    display: flex;                      /* to display diferent elements in a row, not under each other */
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;                /* text at the center, not at the left */
+    flex: 3 1 700px;
+    padding-left: 20px;
+    margin-right: 5rem;
+    padding-right: 50px;
+}
+.statistics .group-1{
+    flex: 1 1 40rem;
+}
+.statistics .group-1 .progress{
+    padding: 1rem 0;
+}
+.statistics h3{
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    padding: .1rem 0;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    color: var(--main-color);
+}
+.statistics .group-1 .progress h3{
+    color: #111;
+    font-size: 1.2rem;
+}
+.statistics .group-1 .progress .bar{
+    width: 100%;
+    background: #ccc;                        /* background color of bars */
+    overflow: hidden;
+    height: 1rem;                              /* height of bars */
+    border-radius: 50rem;
+}
+.statistics .group-1 .progress .bar span{     /* coorful things in bars */
+    display: block;                            /* you need this */
+    height: 100%;                              /* will be a full height of bars */
+    background: var(--main-color);
+    border-radius: 50rem;                      /* coorful things in bars will be rouded */
 }
 
-
-h1{
-    font-weight: 500;
-    
+.statistics .group-1 .progress:nth-child(1) .bar span{
+    width: 45%;                                /* width of the first bar */
+}
+.statistics .group-1 .progress:nth-child(2) .bar span{
+    width: 35%;                                /* width of the second bar */
+}
+.statistics .group-1 .progress:nth-child(3) .bar span{
+    width: 15%;                                /* width of the third bar */
+}
+.statistics .group-1 .progress:nth-child(4) .bar span{
+    width: 5%;                                /* width of the fourth bar */
 }
 
-p, h5{
-    font-weight: 300;
+.statistics .group-2{
+    flex: 1 1 40rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+}
+.statistics .group-2 .box{                /* white bars with shadows */
+    flex: 1 1 15rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+.statistics .group-2 .box h3{
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 1.7rem;
+}
+.statistics .group-2 .box p{
+    color: #666;
+    font-size: 1.2rem;
+    padding-top: .5rem;
 }
 
-h3{
-    font-weight: 600;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
+.tank-info h3{
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 2rem;
+}
+.tank-info h4{
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 1.5rem;
+}
+.tank-info p{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+.tank-info ul{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #333;
+    margin-left: 35px;
+}
+.tank-info img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer{                                         /* FOOTER */
+    text-align: center;
+    background: #333; 
+    color: rgb(229, 229, 229);
 }
