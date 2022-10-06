@@ -31,14 +31,14 @@
 
 
     <!-- video section starts -->
-    <section id="#home">
+    <section id="home">
         <video src="./video/wheat.mp4" autoplay="" muted="" loop=""></video>
     </section>
     <!-- video section ends -->
     
 
     <!-- topic section starts -->
-    <section id="#about" class="#about">
+    <section id="about" class="in-center hidden">
         <div class="topic">
             <h1 data-text="Склад танків">Склад танків</h1>
             <p>Це сайт складу танків на якому, бійці можуть запросити потрібну кількість техніки на свій напрямок фронту</p>
@@ -49,11 +49,11 @@
 
 
     <!-- tank-box section starts -->
-    <div class="tank-box show-on-scroll">
+    <div class="tank-box in-center hidden" id="info">
 
-        <h2> Танки в наявності</h2>
+        <h2 class="hidden"> Танки в наявності</h2>
 
-        <div class="tank">
+        <div class="tank hidden">
             <h3 class="shop-item-title">T-55 АГМ</h3>
             <img src="./img/T-55AGM 2.jpg" alt="" width="400" height="260" class="shop-item-image inline-photo show-on-scroll">
             <p class="shop-item-price">маса: 36т</p>
@@ -76,7 +76,7 @@
         </div>
 
 
-        <div class="tank">
+        <div class="tank hidden">
             <h3 class="shop-item-title">T-64</h3>
             <img src="./img/T-64.jpg" alt="" width="400" height="260" class="shop-item-image inline-photo show-on-scroll">    <!-- show-on-scroll - for img appearing animation -->
             <p class="shop-item-price">маса: 45т</p>
@@ -98,7 +98,7 @@
         </div>
 
 
-        <div class="tank">
+        <div class="tank hidden">
             <h3 class="shop-item-title">T-64 БВ</h3>
             <img src="./img/T-64BV.jpg" alt="" width="400" height="260" class="shop-item-image inline-photo show-on-scroll">
             <p class="shop-item-price">маса: 42т</p>
@@ -120,7 +120,7 @@
         </div>
 
 
-        <div class="tank">
+        <div class="tank hidden">
             <h3 class="shop-item-title">T-84 "Оплот"</h3>
             <img src="./img/T-84 Oplot.jpg" alt="" width="401" height="260" class="shop-item-image inline-photo show-on-scroll">
             <p class="shop-item-price">маса: 48т</p>
@@ -148,7 +148,7 @@
 
 
 
-    <section class="container content-section">
+    <section class="container content-section in-center" id="request">
 
         <h2 class="h2">Ваш запит</h2>
 

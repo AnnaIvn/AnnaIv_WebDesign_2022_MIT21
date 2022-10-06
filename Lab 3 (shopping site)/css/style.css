@@ -21,6 +21,16 @@ body{
     --red: rgb(206, 0, 0);
     --background-red: rgb(81, 0, 0);
 }
+html{
+    scroll-behavior: smooth;                 /* ! for smooth scrolling */
+}
+
+.in-center{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
 /* body css ends */
 
 
@@ -88,6 +98,35 @@ section p{
 }
 /* video css ends */
 
+
+
+
+
+/* hidden scroll animation css starts */
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-10%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.tank:nth-child(2){
+    transition-delay: 200ms;
+}
+.tank:nth-child(4){
+    transition-delay: 600ms;
+}
+
+/* @media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+} */
+/* hidden scroll animation css ends */
 
 
 
@@ -315,18 +354,7 @@ button:hover{
 /* don`t move this css */
 
 
-/* img appearing on scroll section starts */
-/* .inline-photo{
-    opacity: 0;
-    transform: translateY(4em);
-    transition: transform 4s .25s cubic-bezier(0,1,.3,1);
-        opacity: .3s .25s ease-out;
-    will-change: transform, opacity;
-};
-.inline-photo.is-visible{
-    opacity: 1;
-} */
-/* img appearing on scroll section ends */
+
 
 
 /* btn2 css starts */
@@ -564,4 +592,3 @@ button:hover{
     font-size: 1.75em;
 }
 /* shop section ends */
-
