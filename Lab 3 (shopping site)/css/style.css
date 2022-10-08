@@ -1,0 +1,622 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+/* body css starts */
+:root{
+    text-decoration: none;
+}
+
+*{ 
+    margin:0; padding:0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: rgb(34, 34, 34);
+    --blue: rgb(255, 179, 0);
+    --yellow: rgb(210, 210, 18);
+    --background-red: rgb(81, 0, 0);
+}
+html{
+    scroll-behavior: smooth;                 /* ! for smooth scrolling */
+}
+
+.in-center{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+/* body css ends */
+
+
+
+
+
+/* video css starts */
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 100px;            /* ! */
+}
+section video{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* text animation section starts*/
+section h1{                              
+    position: relative;
+    font-size: 8em;
+    color: rgb(34, 34, 34);
+    -webkit-text-stroke: 0.17vw #363b47;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+section h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0; left: 0;
+    width: 0;                            /* ! */
+    height: 100%;
+    color: var(--blue);
+    -webkit-text-stroke: 0vw #363b47;
+    border-right: 2px solid var(--blue);
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate{
+
+    0%,10%,100%{
+        width: 0;
+    }
+
+    70%,90%{
+        width: 100%;
+    }
+}
+/* text animation section ends*/
+
+section p{
+    padding-top: 100px;
+    position: relative;
+    color: #fff;
+    font-size: 1.5rem;
+}
+/* video css ends */
+
+
+
+
+
+/* hidden scroll animation css starts */
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-10%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.tank:nth-child(2){
+    transition-delay: 200ms;
+}
+.tank:nth-child(4){
+    transition-delay: 500ms;
+}
+
+/* @media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+} */
+/* hidden scroll animation css ends */
+
+
+
+
+/* navbar section starts */
+.navbar{
+    position: fixed;
+    width:100%;                        /* important - for text-align to work */
+    z-index: 1000; 
+}
+.navbar ul{
+     
+    list-style: none;
+    padding: 0; margin: 0;
+    text-align: center;
+}
+.navbar li{
+    display: inline-block;
+}
+.navbar a{
+    text-decoration: none;
+    width: 100px;
+    display: block;
+    font-size: 1.5rem;                   /* size of tags in header */                    
+    margin: 1rem 0.8rem; 
+    color: #000; 
+}
+.menuBg {
+    transition: all 3s;
+    background-color: rgb(255, 255, 255);
+    color: #fff;                       /* won`t work */
+    border-bottom: 1px solid lightgray;
+}
+/* navbar section ends */
+
+
+
+
+
+/* button css starts*/
+.btn{
+    border: none;
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--blue);
+    background: rgba(255, 179, 0, 0.123);
+    font-size: 16px;
+    margin: 10px;
+    letter-spacing: 2px;
+}
+.tank-box .tank .btn:hover{
+    background: var(--blue);
+    color:  #262c37;
+    transition: 0.5s;
+    transition-delay: 1s;
+}
+.btn span{
+    position: absolute;
+    display: block;
+    background: var(--blue);
+}
+.btn span:nth-child(1){
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;                 /* | left  */
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.25s;
+}
+.btn:hover span:nth-child(1){
+    cursor: pointer;
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.25s;
+}
+button:hover{
+    cursor: pointer;
+}
+
+.btn span:nth-child(2){
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;                 /* top - */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s;
+    transition-delay: 0.25s;
+}
+.btn:hover span:nth-child(2){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.25s;
+    transition-delay: 0.25s;
+}
+
+.btn span:nth-child(3){
+    right: 0;                          /* from the right */
+    bottom: 0;
+    width: 1px;
+    height: 100%;                 /* right |*/
+    transform: scaleY(0);
+    transform-origin: bottom;           /* to the bottom */
+    transition: transform 0.25s;
+    transition-delay: 0.5s;
+}
+.btn:hover span:nth-child(3){
+    transform: scaleY(1);
+    transform-origin: top;              /* from the top */
+    transition: transform 0.25s;
+    transition-delay: 0.5s;
+}
+
+.btn span:nth-child(4){
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;                 /* top - */
+    transform: scaleX(0);
+    transform-origin: left;             /* to the left */
+    transition: transform 0.25s;
+    transition-delay: 0.75s;
+}
+.btn:hover span:nth-child(4){
+    transform: scaleX(1);
+    transform-origin: right;             /* from the */
+    transition: transform 0.25s;
+    transition-delay: 0.75s;
+}
+/* button css ends*/
+
+
+
+
+
+/* box-tank css starts */
+.tank-box{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-left: 150px;              /* evel */
+    margin-right: 150px;
+}
+.tank-box .tank{
+    padding: 2.5rem;
+}
+
+.tank-box h2{
+    font-size: 4rem;
+    margin: 30px;
+    width: 100%;
+    -webkit-text-stroke: 0.09rem var(--blue);
+}
+.tank-box .tank h3{
+    font-size: 2rem;
+    color: var(--blue);
+    padding: 10px 0px 10px 0px;
+}
+.tank-box .tank p{
+    font-size: 1.4rem;
+    color: rgb(225, 225, 225);
+    padding: 10px;
+}
+/* box-tank css ends */
+
+
+
+
+
+
+/* btn2 css starts */
+.btn2{
+    border: none;
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(243, 93, 0);
+    background: rgba(243, 93, 0, 0.162);
+    font-size: 16px;
+    margin: 10px;
+    letter-spacing: 2px;
+}
+.btn2:hover{
+    background: rgb(243, 93, 0);
+    color: rgb(70, 30, 5);
+    transition: 0.5s;
+    transition-delay: 1s;
+}
+.btn2 span{
+    position: absolute;
+    display: block;
+    background: rgb(243, 93, 0);
+}
+.btn2 span:nth-child(1){
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;                 /* | left  */
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.25s;
+}
+.btn2:hover span:nth-child(1){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.25s;
+}
+
+.btn2 span:nth-child(2){
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;                 /* top - */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s;
+    transition-delay: 0.25s;
+}
+.btn2:hover span:nth-child(2){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.25s;
+    transition-delay: 0.25s;
+}
+
+.btn2 span:nth-child(3){
+    right: 0;                          /* from the right */
+    bottom: 0;
+    width: 1px;
+    height: 100%;                 /* right |*/
+    transform: scaleY(0);
+    transform-origin: bottom;           /* to the bottom */
+    transition: transform 0.25s;
+    transition-delay: 0.5s;
+}
+.btn2:hover span:nth-child(3){
+    transform: scaleY(1);
+    transform-origin: top;              /* from the top */
+    transition: transform 0.25s;
+    transition-delay: 0.5s;
+}
+
+.btn2 span:nth-child(4){
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;                 /* top - */
+    transform: scaleX(0);
+    transform-origin: left;             /* to the left */
+    transition: transform 0.25s;
+    transition-delay: 0.75s;
+}
+.btn2:hover span:nth-child(4){
+    transform: scaleX(1);
+    transform-origin: right;             /* from the */
+    transition: transform 0.25s;
+    transition-delay: 0.75s;
+}
+/* btn2 css ends */
+
+
+
+
+
+
+/* shop section starts */
+.container .h2{
+    display: inline-block;
+    font-size: 4rem;
+    margin-top: 100px;
+    text-align: center;
+    width: 100%;
+    -webkit-text-stroke: 0.09rem var(--blue);
+    padding-bottom: 30px;
+}
+.container {
+    display: block;
+}
+
+.tour-row {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+.tour-row:last-child {
+    border: none;
+}
+.tour-item {
+    display: inline-block;
+    padding-right: .5em;
+}
+.tour-date {
+    color: #555;
+    width: 11%;
+    font-weight: bold;
+}
+.tour-city {
+    width: 24%;
+}
+.tour-arena {
+    width: 42%;
+}
+.tour-btn {
+    max-width: 19%;
+}
+
+.shop-item {
+    margin: 30px;
+}
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+.shop-item-image {
+    height: 250px;
+}
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.shop-item-price {
+    flex-grow: 1;
+    color: #333;
+}
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: var(--blue);
+}
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.cart-row {                     /* ! */
+    display: flex;
+    padding-left: 100px;         /*  відступ */
+    padding-right: 100px;
+}
+.cart-item {
+    width: 45%;
+}
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: var(--blue);
+}
+.cart-quantity {
+    width: 35%;
+}
+.cart-item-title {
+    color: rgb(255, 255, 255);
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+.cart-row:last-child .cart-column {
+    border: none;
+}
+.cart-total {
+    text-align: center;
+    padding-left: 700px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.7em;
+    color: var(--blue);
+    margin-right: 20px;
+}
+.cart-total-price {
+    color: #fff;
+    font-size: 1.7em;
+}
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+/* shop section ends */
+
+
+
+/* footer section starts */
+footer{                                   
+    text-align: center;
+    background: #fff; 
+    color: #333;
+}
+/* footer section ends */
+
+
+
+
+/* TANK-INFO css starts */
+.tank-info{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+.tank-info div{
+    margin-bottom: 50px;
+}
+.tank-info h4{
+    font-size: 3rem;
+    margin: 30px;
+    width: 100%;
+    color: var(--blue);
+}
+.tank-info p, li{
+    padding-bottom: 10px;
+    color: rgb(162, 162, 162);
+    font-size: 1.4rem;
+}
+.tank-info li{
+    margin-left: 15px;
+}
+.tank-info h5{
+    margin-top: 20px;
+    padding-bottom: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+}
+/* TANK-INFO css ends */
+
+
+
+
+
+
+/* sizing css starts, isn`t done */
+@media (max-width:950px){
+
+    html{
+        font-size: 80%;
+    }
+
+
+}
+
+@media (max-width:850px){
+    
+    h1{
+        font-size: 50%;
+    }
+}
+
+@media (max-width:450px){
+
+    video{
+        display: none;
+    }
+
+    html{
+        font-size: 70%;
+    }
+
+}
