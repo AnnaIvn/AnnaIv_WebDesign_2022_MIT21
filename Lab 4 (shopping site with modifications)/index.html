@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Склад</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/874141bd8d.js" crossorigin="anonymous"></script>
+    <script src="script.js" async></script>   
+</head>
+
+
+<body>
+
+
+
+    <!-- header section starts -->
+    <header id="navbar" class="navbar">
+        <ul>
+            <li> <a href="#home"> Головна </a> </li>
+            <li> <a href="#about"> Про нас </a> </li>
+            <li> <a href="#info"> Танки </a> </li>
+            <li> <a href="#request"> Запит </a> </li>
+        </ul>
+    </header>
+    <!-- header section ends -->
+
+
+
+    <!-- video section starts -->
+    <section id="home">
+        <video src="./video/wheat.mp4" autoplay="" muted="" loop=""></video>
+    </section>
+    <!-- video section ends -->
+    
+
+    <!-- topic section starts -->
+    <section id="about" class="in-center hidden">
+        <div class="topic">
+            <h1 data-text="Склад танків">Склад танків</h1>
+            <p>Це сайт складу танків на якому, бійці можуть запросити потрібну кількість техніки на свій напрямок фронту</p>
+        </div>
+    </section>
+    <!-- topic section ends -->
+
+
+
+    <!-- tank-box section starts -->
+    <div class="tank-box in-center hidden" id="info">
+
+        <h2 class="hidden"> Танки в наявності</h2>
+
+        <div class="tank hidden">
+            <h3 class="shop-item-title">T-55 АГМ</h3>
+            <img src="./img/T-55AGM 2.jpg" alt="" width="400" height="260" class="shop-item-image inline-photo show-on-scroll">
+            <p class="shop-item-price">36т</p>
+            <!-- <p> маса: <span class="shop-item-price"></span>36т</p> -->
+            <a href="T-55AGM.html" class="btn" >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Info
+            </a>
+                
+            <button href="#" class="btn btn-primary shop-item-button" type="button" >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Add
+            </button>
+        </div>
+
+
+        <div class="tank hidden">
+            <h3 class="shop-item-title">T-64</h3>
+            <img src="./img/T-64.jpg" alt="" width="400" height="260" class="shop-item-image inline-photo show-on-scroll">    <!-- show-on-scroll - for img appearing animation -->
+            <p class="shop-item-price">45т</p>
+            <a href="T-64.html" class="btn" >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Info
+            </a>
+                
+            <button href="#" class="btn btn-primary shop-item-button" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Add
+            </button>
+        </div>
+
+
+        <div class="tank hidden">
+            <h3 class="shop-item-title">T-64 БВ</h3>
+            <img src="./img/T-64BV.jpg" alt="" width="400" height="260" class="shop-item-image inline-photo show-on-scroll">
+            <p class="shop-item-price">42т</p>
+            <a href="T-64BV.html" class="btn" >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Info
+            </a>
+                
+            <button href="#" class="btn btn-primary shop-item-button" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Add
+            </button>
+        </div>
+
+
+        <div class="tank hidden">
+            <h3 class="shop-item-title">T-84 "Оплот"</h3>
+            <img src="./img/T-84 Oplot.jpg" alt="" width="401" height="260" class="shop-item-image inline-photo show-on-scroll">
+            <p class="shop-item-price">48т</p>
+            <a href="T-84 Oplot.html" class="btn" >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Info
+            </a>
+                
+            <button href="#" class="btn btn-primary shop-item-button" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Add
+            </button>
+        </div>
+
+    </div>
+    <!-- tank-box section ends -->
+
+
+
+
+
+    <section class="container content-section in-center" id="request">
+
+        <h2 class="h2">Ваш запит</h2>
+
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+
+
+        <div class="cart-items">
+
+            <div class="cart-row">
+
+                <div class="cart-item cart-column">
+                    <img class="cart-item-image" src="./img/T-55AGM 2.jpg" width="100" height="100">
+                    <span class="cart-item-title">T-55 АГМ</span>
+                </div>
+
+                <span class="cart-price cart-column">36т</span>
+
+                <div class="cart-quantity cart-column">
+                    <input class="cart-quantity-input" type="number" value="1">
+                    <button class="btn2 btn2-danger" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        вилучити</button>
+                </div>
+
+            </div>
+
+            <div class="cart-row">
+
+                <div class="cart-item cart-column">
+                    <img class="cart-item-image" src="./img/T-64.jpg" width="100" height="100">
+                    <span class="cart-item-title">T-64</span>
+                </div>
+
+                <span class="cart-price cart-column">45т</span>
+
+                <div class="cart-quantity cart-column">
+                    <input class="cart-quantity-input" type="number" value="1">
+                    <button class="btn2 btn2-danger" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        вилучити</button>
+                </div>
+
+            </div>
+
+            <div class="cart-row">
+
+                <div class="cart-item cart-column">
+                    <img class="cart-item-image" src="./img/T-64BV.jpg" width="100" height="100">
+                    <span class="cart-item-title">T-64 БВ</span>
+                </div>
+
+                <span class="cart-price cart-column">42т</span>
+
+                <div class="cart-quantity cart-column">
+                    <input class="cart-quantity-input" type="number" value="1">
+                    <button class="btn2 btn2-danger" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        вилучити</button>
+                </div>
+
+            </div>
+
+            <div class="cart-row">
+
+                <div class="cart-item cart-column">
+                    <img class="cart-item-image" src="./img/T-84 Oplot.jpg" width="100" height="100">
+                    <span class="cart-item-title">T-84 "Оплот"</span>
+                </div>
+
+                <span class="cart-price cart-column">48т</span>
+
+                <div class="cart-quantity cart-column">
+                    <input class="cart-quantity-input" type="number" value="1">
+                    <button class="btn2 btn2-danger" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        вилучити</button>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="cart-total">
+
+            <strong class="cart-total-title">Загальна маса:</strong>
+            <span class="cart-total-price">30т</span>
+
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Зробити запит</button>
+    </section>
+
+
+
+
+
+    <!-- weather section starts -->
+    <div class="container2">
+        <div class="card">
+            <h2><i class="fa fa-map-marker"></i> <span id="location">  </span> </h2>
+            <h6 id="weather"></h6>
+            <h4><span id="temp"> <sup>0</sup> </span> C </h4>
+            <img src="" id="icon">
+            <button onclick="window.location.reload();" class="refresh"> 
+                <i class="fa fa-refresh"></i>
+            </button>
+        </div>
+    </div>
+    <!-- weather section ends -->
+
+
+    <!-- js weather section starts -->
+    <script type="text/javascript">
+
+        link = "https://api.openweathermap.org/data/2.5/weather?q=Kyiv&appid=89cab3e8e3ca294d5d749fb4de81eafb";
+        var request = new XMLHttpRequest();
+        request.open('GET', link, true);
+
+        request.onload = function(){
+            var obj = JSON.parse(this.response);
+            console.log(obj);
+            document.getElementById('weather').innerHTML = obj.weather[0].description;
+            document.getElementById('location').innerHTML = obj.name;
+            document.getElementById('temp').innerHTML = obj.main.temp - 270.27;
+            /* document.getElementById('icon').src = "https://openweathermap.org/img/w" +obj.weather[0].icon+ ".png"; */
+        }
+
+        if(request.status==200){
+            console.log("ERROR");
+        }
+        request.send();
+
+
+    </script>
+    <!-- js weather section ends -->
+
+
+
+
+
+
+
+    <!-- section, where comments appear stats -->
+    <div class="comments">
+        <div class="com-cont">
+            <br>
+        </div>
+    </div>
+    <!-- section, where comments appear ends -->
+
+
+
+    <!-- json in js for comments section starts -->
+    <script>
+        const commentsContainer = document.querySelector('.com-cont');
+        
+        let responce = fetch('https://dummyjson.com/comments?limit=7&skip=6&select=body,postId').then(res => res.json()).then(json => parse(json.comments));
+        
+        async function parse(data) {
+            for(let element = 0; element < data.length; element++) {
+                let name = await data[element].user.username;
+                let text = await data[element].body;
+                renderComment(name, text)
+            };
+        }
+        
+        function renderComment(name, text) {
+            const commentHTML = `<div class="box">
+                                    <h4 class="comment-user">${name}</h4>
+                                    <p>${text}</p>
+                                    <br>
+                                    <br>
+                                </div>`;
+            commentsContainer.insertAdjacentHTML('beforeend', commentHTML);
+        }
+    </script>
+    <!-- json in js for comments section ends -->
+
+
+
+
+
+
+    <!-- footer starts -->
+    <footer>
+
+        <div>
+            &copy; 2022
+         </div>
+    
+    </footer>
+    <!-- footer ends -->
+    
+
+</body>
+
+
+</html>
