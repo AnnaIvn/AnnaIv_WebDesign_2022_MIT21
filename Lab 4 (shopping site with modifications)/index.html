@@ -294,7 +294,7 @@
             console.log(obj);
             document.getElementById('weather').innerHTML = obj.weather[0].description;
             document.getElementById('location').innerHTML = obj.name;
-            document.getElementById('temp').innerHTML = obj.main.temp - 270.27;
+            document.getElementById('temp').innerHTML = Math.round(obj.main.temp - 273.15);
             /* document.getElementById('icon').src = "https://openweathermap.org/img/w" +obj.weather[0].icon+ ".png"; */
         }
 
@@ -325,14 +325,14 @@
 
     <!-- json in js for comments section starts -->
     <script>
-        const commentsContainer = document.querySelector('.com-cont');
+        const commentsCont = document.querySelector('.com-cont');
         
         let responce = fetch('https://dummyjson.com/comments?limit=7&skip=6&select=body,postId').then(res => res.json()).then(json => parse(json.comments));
         
         async function parse(data) {
-            for(let element = 0; element < data.length; element++) {
-                let name = await data[element].user.username;
-                let text = await data[element].body;
+            for(let i = 0; i < data.length; i++) {
+                let name = await data[i].user.username;
+                let text = await data[i].body;
                 renderComment(name, text)
             };
         }
@@ -344,7 +344,7 @@
                                     <br>
                                     <br>
                                 </div>`;
-            commentsContainer.insertAdjacentHTML('beforeend', commentHTML);
+            commentsCont.insertAdjacentHTML('beforeend', commentHTML);
         }
     </script>
     <!-- json in js for comments section ends -->
